@@ -2991,31 +2991,6 @@
         "signature": "91819b65ce0874f3ab895ef54b3c4ade1123a1b5c6ceb8221ab5a86d489904bb",
         "affectsGlobalScope": false
       },
-      "../src/dao/user.entity.ts": {
-        "version": "9bed4d32748981f21516a9304dbe48ea9972a1198af895e4fbf2754838a27c23",
-        "signature": "a7847075f4ee8fddf527b733386358161deafe29e8e508f104f7cdf2370f985e",
-        "affectsGlobalScope": false
-      },
-      "../src/constant/index.ts": {
-        "version": "e26fc85d9577f95c868c9b952273991bedcb84f9e86743403d69d3cf75d41fc4",
-        "signature": "0aa9b00c9583815c716af33c7827a81f894247384616877e5633a82d3fe605cb",
-        "affectsGlobalScope": false
-      },
-      "../src/user/user.service.ts": {
-        "version": "05981d00485f522166aa8739be7eb9e6e9424522bf54d31cce4863e352b9a74d",
-        "signature": "104695bd4d4a7bee1a055b0f62a412645dd4c54bf2dc643b283d8c885a736c04",
-        "affectsGlobalScope": false
-      },
-      "../src/user/user.controller.ts": {
-        "version": "45331bd28741f2e8f2435c59c280e54c1c0bca93d6144f777e771a40759b39ff",
-        "signature": "37997f94f4b2dc43da9f59a9703404f734424bf3b6d0048cd6e27d24b85a311f",
-        "affectsGlobalScope": false
-      },
-      "../src/user/user.module.ts": {
-        "version": "f92f673e130a8eaaccd9f0689270aec80576420c6ad284176ad7d533d0b33fd9",
-        "signature": "482b8f0d35a3d453500a15b6c6057c1e4c40baa4329b39da9e1026d8e1de4329",
-        "affectsGlobalScope": false
-      },
       "../node_modules/@nestjs/passport/dist/abstract.strategy.d.ts": {
         "version": "ba63131c5e91f797736444933af16ffa42f9f8c150d859ec65f568f037a416ea",
         "signature": "ba63131c5e91f797736444933af16ffa42f9f8c150d859ec65f568f037a416ea",
@@ -3069,6 +3044,31 @@
       "../node_modules/@nestjs/passport/index.d.ts": {
         "version": "8f1241f5d9f0d3d72117768b3c974e462840fbd85026fb66685078945404cf2f",
         "signature": "8f1241f5d9f0d3d72117768b3c974e462840fbd85026fb66685078945404cf2f",
+        "affectsGlobalScope": false
+      },
+      "../src/dao/user.entity.ts": {
+        "version": "9bed4d32748981f21516a9304dbe48ea9972a1198af895e4fbf2754838a27c23",
+        "signature": "a7847075f4ee8fddf527b733386358161deafe29e8e508f104f7cdf2370f985e",
+        "affectsGlobalScope": false
+      },
+      "../src/constant/index.ts": {
+        "version": "e26fc85d9577f95c868c9b952273991bedcb84f9e86743403d69d3cf75d41fc4",
+        "signature": "0aa9b00c9583815c716af33c7827a81f894247384616877e5633a82d3fe605cb",
+        "affectsGlobalScope": false
+      },
+      "../src/user/user.service.ts": {
+        "version": "05981d00485f522166aa8739be7eb9e6e9424522bf54d31cce4863e352b9a74d",
+        "signature": "104695bd4d4a7bee1a055b0f62a412645dd4c54bf2dc643b283d8c885a736c04",
+        "affectsGlobalScope": false
+      },
+      "../src/user/user.controller.ts": {
+        "version": "8cb6778836d211ee00d4701baa8982b205820cbd493d17b425a4a939b4e061cb",
+        "signature": "37997f94f4b2dc43da9f59a9703404f734424bf3b6d0048cd6e27d24b85a311f",
+        "affectsGlobalScope": false
+      },
+      "../src/user/user.module.ts": {
+        "version": "f92f673e130a8eaaccd9f0689270aec80576420c6ad284176ad7d533d0b33fd9",
+        "signature": "482b8f0d35a3d453500a15b6c6057c1e4c40baa4329b39da9e1026d8e1de4329",
         "affectsGlobalScope": false
       },
       "../node_modules/@nestjs/jwt/node_modules/@types/jsonwebtoken/index.d.ts": {
@@ -8038,6 +8038,7 @@
       ],
       "../src/user/user.controller.ts": [
         "../node_modules/@nestjs/common/index.d.ts",
+        "../node_modules/@nestjs/passport/index.d.ts",
         "../node_modules/@nestjs/swagger/index.d.ts",
         "../node_modules/@types/express/index.d.ts",
         "../node_modules/@types/mongoose/index.d.ts",

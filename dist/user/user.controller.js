@@ -14,6 +14,7 @@ var __param = (this && this.__param) || function (paramIndex, decorator) {
 Object.defineProperty(exports, "__esModule", { value: true });
 exports.UserController = void 0;
 const common_1 = require("@nestjs/common");
+const passport_1 = require("@nestjs/passport");
 const swagger_1 = require("@nestjs/swagger");
 const user_entity_1 = require("../dao/user.entity");
 const user_service_1 = require("./user.service");
@@ -46,6 +47,8 @@ __decorate([
 ], UserController.prototype, "createUser", null);
 __decorate([
     common_1.Get(':_id'),
+    common_1.UseGuards(passport_1.AuthGuard('jwt')),
+    swagger_1.ApiBearerAuth(),
     __param(0, common_1.Req()), __param(1, common_1.Param('_id')),
     __metadata("design:type", Function),
     __metadata("design:paramtypes", [Object, String]),
@@ -53,6 +56,8 @@ __decorate([
 ], UserController.prototype, "getUserDetail", null);
 __decorate([
     common_1.Put(':_id'),
+    common_1.UseGuards(passport_1.AuthGuard('jwt')),
+    swagger_1.ApiBearerAuth(),
     __param(0, common_1.Req()),
     __param(1, common_1.Param('_id')),
     __param(2, common_1.Body()),
@@ -62,6 +67,8 @@ __decorate([
 ], UserController.prototype, "updateUser", null);
 __decorate([
     common_1.Delete(':_id'),
+    common_1.UseGuards(passport_1.AuthGuard('jwt')),
+    swagger_1.ApiBearerAuth(),
     __param(0, common_1.Req()), __param(1, common_1.Param('_id')),
     __metadata("design:type", Function),
     __metadata("design:paramtypes", [Object, String]),
@@ -69,6 +76,8 @@ __decorate([
 ], UserController.prototype, "deleteUser", null);
 __decorate([
     common_1.Get(),
+    common_1.UseGuards(passport_1.AuthGuard('jwt')),
+    swagger_1.ApiBearerAuth(),
     swagger_1.ApiQuery({
         name: 'keyword',
         type: String,

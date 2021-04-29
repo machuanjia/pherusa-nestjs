@@ -1,9 +1,9 @@
 /*
  * @Author: D.Y
  * @Date: 2021-04-16 19:18:46
- * @LastEditTime: 2021-04-29 11:00:27
+ * @LastEditTime: 2021-04-29 15:43:58
  * @LastEditors: D.Y
- * @FilePath: /arthemis/src/user/user.controller.ts
+ * @FilePath: /pherusa-server/src/user/user.controller.ts
  * @Description:
  */
 import {
@@ -16,8 +16,10 @@ import {
   Put,
   Query,
   Req,
+  UseGuards,
 } from '@nestjs/common';
-import { ApiQuery, ApiTags } from '@nestjs/swagger';
+import { AuthGuard } from '@nestjs/passport';
+import { ApiBearerAuth, ApiQuery, ApiTags } from '@nestjs/swagger';
 import { Request } from 'express';
 import { User } from '../dao/user.entity';
 import { UserService } from './user.service';
@@ -33,11 +35,15 @@ export class UserController {
   }
 
   @Get(':_id')
+  @UseGuards(AuthGuard('jwt'))
+  @ApiBearerAuth()
   async getUserDetail(@Req() req: Request, @Param('_id') _id: string) {
     return this.userService.getUserDetail(_id);
   }
 
   @Put(':_id')
+  @UseGuards(AuthGuard('jwt'))
+  @ApiBearerAuth()
   async updateUser(
     @Req() req: Request,
     @Param('_id') _id: string,
@@ -47,11 +53,15 @@ export class UserController {
   }
 
   @Delete(':_id')
+  @UseGuards(AuthGuard('jwt'))
+  @ApiBearerAuth()
   async deleteUser(@Req() req: Request, @Param('_id') _id: string) {
     return this.userService.deleteUser(_id);
   }
 
   @Get()
+  @UseGuards(AuthGuard('jwt'))
+  @ApiBearerAuth()
   @ApiQuery({
     name: 'keyword',
     type: String,
