@@ -1,7 +1,7 @@
 /*
  * @Author: D.Y
  * @Date: 2021-04-29 11:04:25
- * @LastEditTime: 2021-04-29 11:07:43
+ * @LastEditTime: 2021-04-29 11:55:31
  * @LastEditors: D.Y
  * @FilePath: /pherusa-server/src/main.ts
  * @Description:
@@ -19,18 +19,18 @@ async function bootstrap() {
 
   app.useGlobalFilters(new NotFoundExceptionFilter());
   app.enableCors();
-  app.setGlobalPrefix('api/pherusa');
+  app.setGlobalPrefix('api');
   app.useStaticAssets(join(__dirname, '../public'));
   app.useGlobalInterceptors(app.get(ResponseInterceptor));
   const options = new DocumentBuilder()
-    .setTitle('Pherusa-Api')
-    .setDescription('Pherusa server apis')
+    .setTitle('Micro-Api')
+    .setDescription('Micro server apis')
     .setVersion('1.0')
     .addBearerAuth()
     .build();
   const document = SwaggerModule.createDocument(app, options);
   SwaggerModule.setup('api-docs', app, document);
-  await app.listen(4000);
-  console.log('http://localhost:4000/api-docs');
+  await app.listen(40000);
+  console.log('http://localhost:40000/api-docs');
 }
 bootstrap();
