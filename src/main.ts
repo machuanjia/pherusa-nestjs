@@ -1,7 +1,7 @@
 /*
  * @Author: D.Y
  * @Date: 2021-04-29 11:04:25
- * @LastEditTime: 2021-04-29 11:55:31
+ * @LastEditTime: 2021-04-29 14:14:14
  * @LastEditors: D.Y
  * @FilePath: /pherusa-server/src/main.ts
  * @Description:
@@ -19,7 +19,7 @@ async function bootstrap() {
 
   app.useGlobalFilters(new NotFoundExceptionFilter());
   app.enableCors();
-  app.setGlobalPrefix('api');
+  app.setGlobalPrefix('api/micro');
   app.useStaticAssets(join(__dirname, '../public'));
   app.useGlobalInterceptors(app.get(ResponseInterceptor));
   const options = new DocumentBuilder()

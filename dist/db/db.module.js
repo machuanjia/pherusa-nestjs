@@ -10,9 +10,7 @@ exports.DbModule = void 0;
 const common_1 = require("@nestjs/common");
 const nestjs_typegoose_1 = require("nestjs-typegoose");
 const user_schema_1 = require("./schema/user.schema");
-const models = nestjs_typegoose_1.TypegooseModule.forFeature([
-    user_schema_1.UserSchema,
-]);
+const models = nestjs_typegoose_1.TypegooseModule.forFeature([user_schema_1.UserSchema]);
 let DbModule = class DbModule {
 };
 DbModule = __decorate([
@@ -22,7 +20,7 @@ DbModule = __decorate([
             nestjs_typegoose_1.TypegooseModule.forRootAsync({
                 useFactory() {
                     return {
-                        uri: 'mongodb://127.0.0.1:27017/pherusa',
+                        uri: 'mongodb://127.0.0.1:27017/pherusaMicro',
                         useNewUrlParser: true,
                         useUnifiedTopology: true,
                         useCreateIndex: true,
